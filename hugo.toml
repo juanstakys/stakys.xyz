@@ -1,0 +1,109 @@
+baseurl = "https://www.stakys.xyz"
+title = "stakys.xyz"
+theme = "coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+enableEmoji = true
+
+[pagination]
+pagerSize = 20
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Juan Cruz Stakys"
+  info = "Full Stack Developer"
+  description = "Juan Stakys' Blog & Portfolio"
+  keywords = "blog,developer,programmer,personal"
+  avatarurl = "images/avatar.jpg"
+  HeadTitle = "Juan Cruz Stakys"
+
+  faviconSVG = "favicon/favicon.svg"
+  faviconICO = "favicon/favicon.ico"
+  favicon = "favicon/favicon.ico"
+  favicon_32 = "favicon/favicon-32x32.png"
+  favicon_16 = "favicon/favicon-16x16.png"
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  # customCSS = ["css/custom.css"]
+  # customSCSS = ["scss/custom.scss"]
+  # customJS = ["js/custom.js"]
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/juanstakys/"
+[[params.social]]
+  name = "Gitlab"
+  icon = "fa-brands fa-gitlab fa-2x"
+  weight = 2
+  url = "https://gitlab.com/cruzjuan/"
+[[params.social]]
+  name = "Email"
+  icon = "fa-solid fa-envelope fa-2x"
+  weight = 3
+  url = "mailto:stakys.jc+stakysxyz@gmail.com"
+
+
+# Content
+
+[languages.en]
+  languageName = ":uk:"
+
+[[languages.en.menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+[[languages.en.menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
+[[languages.en.menu.main]]
+  name = "Projects"
+  weight = 3
+  url = "projects/"
+[[languages.en.menu.main]]
+  name = "Contact"
+  weight = 4
+  url = "contact/"
+
+
+[languages.es-ar]
+  languageName = ":argentina:"
+
+[languages.es-ar.params]
+  info = "Desarrollador Full Stack"
+  description = "Portafolio y Blog de Juan Cruz Stakys"
+  keywords = "blog,desarrollador,programador,personal"
+
+[[languages.es-ar.menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+[[languages.es-ar.menu.main]]
+  name = "Sobre mí"
+  weight = 2
+  url = "about/"
+[[languages.es-ar.menu.main]]
+  name = "Proyectos"
+  weight = 3
+  url = "projects/"
+[[languages.es-ar.menu.main]]
+  name = "Contacto"
+  weight = 4
+  url = "contact/"
+
+
