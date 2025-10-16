@@ -52,9 +52,14 @@ style = "github-dark"
   weight = 2
   url = "https://gitlab.com/cruzjuan/"
 [[params.social]]
+  name = "LinkedIn"
+  icon = "fa-brands fa-linkedin fa-2x"
+  weight = 3
+  url = "https://www.linkedin.com/in/stak/"
+[[params.social]]
   name = "Email"
   icon = "fa-solid fa-envelope fa-2x"
-  weight = 3
+  weight = 4
   url = "mailto:stakys.jc+stakysxyz@gmail.com"
 
 
