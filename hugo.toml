@@ -11,6 +11,10 @@ pagerSize = 20
 [markup.highlight]
 style = "github-dark"
 
+[markup.goldmark]
+  [markup.goldmark.renderer]
+  unsafe = true
+
 [params]
   author = "Juan Cruz Stakys"
   info = "Full Stack Developer"
@@ -110,5 +114,4 @@ style = "github-dark"
   name = "Contacto"
   weight = 4
   url = "contact/"
-
 
