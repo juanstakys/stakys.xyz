@@ -1,49 +1,52 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="es">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    </head>
+    <body>
+        <Header />
+        <main>
+			<section class="title">
+				<img
+                src="src/assets/temporal-portrait.webp"
+				width="200px"
+                alt="Portrait photograph of Juan Cruz Stakys, a professional headshot against a neutral background with warm, approachable lighting"
+				/>
+				<div>
+					<h2>Juan Cruz Stakys</h2>
+					<h5>Matemático y Programador</h5>
+				</div>
+			</section>
+			<hr>
+			<section class="about">
+				<h3>Sobre mí</h3>
+				<p>
+					Soy un amante de las matemáticas y programador de oficio. Actualmente estudio Licenciatura en Ciencias Matemáticas en la Universidad de Buenos Aires (UBA) he trabajado como desarrollador RPA, Backend, Fullstack y Frontend. Actualmente me desempeño como Frontend en Emprendimientos Satelitales.
+				</p>
+				<h3>Mi carrera</h3>
+				<p>
+					Después de terminar mis estudios secundarios como técnico en informática, y habiendo estudiado desarrollo web y Python en la Academia Online Platzi, conseguí mi primer trabajo como desarrollador RPA en la consultora <i>FyS Tech Group</i>. Ahí trabajé creando soluciones para una variedad de clientes importantes en Argentina con Automation Anywhere. Más adelante mi rol se centró más en crear plataformas web, tanto para uso interno como para clientes, donde usé el lenguaje Javascript y TypeScript con frameworks como React y Node.js.
+				</p>
+			</section>
+        </main>
+        <Footer />
+    </body>
 </html>
+
+<style>
+	section {
+		margin: 2em 0;
+	}
+	.title {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 3em;
+	}
