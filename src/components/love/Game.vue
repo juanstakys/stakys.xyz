@@ -14,7 +14,11 @@
             alt="Inflador abierto"
         />
         <img
-            :style="{ bottom: (100 + aire) / 2 + 'px', height: aire + '%', left: (90 - aire)/2 + '%' }"
+            :style="{
+                bottom: (100 + aire) / 2 + 'px',
+                height: aire + '%',
+                left: (90 - aire) / 2 + '%',
+            }"
             class="corazon"
             src="src/assets/corazon.png"
             alt="Corazon"
@@ -36,6 +40,9 @@ const bombear = () => {
         bombeando.value = true;
         conteo.value++;
         aire.value++;
+        if(aire.value > 71) { // 71 parece ser la dificultad justa
+            alert("BOOOOM!!!") // TODO: implementar explosión de amor
+        }
     }
 };
 
@@ -43,10 +50,12 @@ const stopBombear = () => {
     bombeando.value = false;
 };
 
-const handleKeyPress = ({ key, type }) => {
-    if (key == " ") {
-        if (type == "keydown") bombear();
-        else stopBombear();
+const handleKeyPress = (event) => {
+    if (event.key == " ") {
+        event.preventDefault();
+        if (event.type == "keydown") {
+            bombear();
+        } else stopBombear();
     }
 };
 
@@ -54,7 +63,7 @@ onMounted(() => {
     document.addEventListener("keydown", handleKeyPress);
     document.addEventListener("keyup", handleKeyPress);
     setInterval(() => {
-        if(aire.value > 0.2) aire.value -= 0.01 * aire.value;
+        if (aire.value > 0.2) aire.value -= 0.01 * aire.value;
     }, 100);
 });
 </script>
