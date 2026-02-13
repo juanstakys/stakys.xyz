@@ -23,6 +23,7 @@
             src="src/assets/corazon.png"
             alt="Corazon"
         />
+        <img class="therian" src="src/assets/therian.gif" alt="Therian" />
     </div>
 </template>
 
@@ -38,8 +39,9 @@ const bombear = () => {
         bombeando.value = true;
         conteo.value++;
         aire.value++;
-        if(aire.value > 71) { // 71 parece ser la dificultad justa
-            alert("BOOOOM!!!") // TODO: implementar explosión de amor
+        if (aire.value > 71) {
+            // 71 parece ser la dificultad justa
+            alert("BOOOOM!!!"); // TODO: implementar explosión de amor
         }
     }
 };
@@ -71,9 +73,8 @@ onMounted(() => {
     position: relative;
     top: 0;
     left: 0;
+    cursor: url(https://cdn.custom-cursor.com/db/cursor/32/Gun_Sight.png), auto;
     .bg {
-        cursor:
-            url(https://cdn.custom-cursor.com/db/cursor/32/Gun_Sight.png), auto;
         position: relative;
         border: 2px solid black;
         width: 100%;
@@ -89,6 +90,13 @@ onMounted(() => {
     .corazon {
         position: absolute;
         z-index: 50;
+    }
+    .therian {
+        position: absolute;
+        z-index: 75;
+        height: 50px;
+        left: 20px;
+        bottom: 50px;
     }
 }
 </style>
