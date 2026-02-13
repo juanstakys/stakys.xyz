@@ -24,8 +24,6 @@
             alt="Corazon"
         />
     </div>
-    <h1>Bombeaste {{ conteo }} veces</h1>
-    <h1>Aire = {{ aire }}</h1>
 </template>
 
 <script setup>
