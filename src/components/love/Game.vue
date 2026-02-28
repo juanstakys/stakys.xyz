@@ -23,7 +23,14 @@
             src="src/assets/corazon.png"
             alt="Corazon"
         />
-        <img class="therian" src="src/assets/therian.gif" alt="Therian" />
+        <Transition>
+            <img
+                v-if="conteo % 2"
+                class="therian"
+                src="src/assets/therian.gif"
+                alt="Therian"
+            />
+        </Transition>
     </div>
 </template>
 
@@ -68,7 +75,7 @@ onMounted(() => {
 });
 </script>
 
-<style>
+<style scoped>
 .game {
     position: relative;
     top: 0;
@@ -97,6 +104,16 @@ onMounted(() => {
         height: 50px;
         left: 20px;
         bottom: 50px;
+    }
+
+    .v-enter-active,
+    .v-leave-active {
+        transition: opacity 0.5s ease;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        opacity: 0;
     }
 }
 </style>
