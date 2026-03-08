@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import portrait from "../assets/temporal-portrait.webp"
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
@@ -14,9 +16,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
         <Header />
         <main>
 			<section class="title">
-				<img
-                src="src/assets/temporal-portrait.webp"
-				width="200px"
+				<Image
+                src={portrait}
+				width={200}
                 alt="Portrait photograph of Juan Cruz Stakys, a professional headshot against a neutral background with warm, approachable lighting"
 				/>
 				<div>
