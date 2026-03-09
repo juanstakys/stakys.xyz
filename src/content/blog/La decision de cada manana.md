@@ -4,6 +4,7 @@ description: ''
 pubDate: 'Mar 08 2026'
 draft: true
 ---
+[BORRADOR]
 
 A veces al despertar, cuando tengo que hacer tiempo a la mañana, me gusta sentarme y escribir. La vez anterior escribí algunas quejas sobre la sociedad, y hoy pensaba en escribir sobre mi desprecio al televisor, pero me di cuenta que no debe ser sano despertarse y encontrar siempre algo para quejarse. Por eso pensé en escribir sobre lo que me siento grato, o sobre la decisión de todas las mañanas de quejarse o agradecer. Al final me decidí por escribir este artículo.
 
