@@ -9,17 +9,40 @@ import HeaderLink from './HeaderLink.astro';
 		<div class="internal-links">
 			<HeaderLink href="/">Inicio</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/english-works">English works</HeaderLink>
+			<HeaderLink href="/essays">Essays</HeaderLink>
 			<!-- <HeaderLink href="/projects">Proyectos</HeaderLink> -->
 		</div>
+		<button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
 	</nav>
+	<div class="mobile-menu" id="mobile-menu">
+		<HeaderLink href="/">Inicio</HeaderLink>
+		<HeaderLink href="/blog">Blog</HeaderLink>
+		<HeaderLink href="/essays">Essays</HeaderLink>
+		<!-- <HeaderLink href="/projects">Proyectos</HeaderLink> -->
+	</div>
 </header>
+
+<script>
+	const btn = document.getElementById('hamburger-btn');
+	const menu = document.getElementById('mobile-menu');
+
+	btn?.addEventListener('click', () => {
+		const isOpen = menu?.classList.toggle('open');
+		btn.setAttribute('aria-expanded', String(isOpen));
+		btn.classList.toggle('active', isOpen);
+	});
+</script>
+
 <style>
 	header {
 		margin: 0;
 		padding: 0 1em;
 		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		box-shadow: 0 2px 8px rgba(#000, 5%);
 	}
 	h2 {
 		margin: 0;
@@ -37,7 +60,7 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		color: #000;
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
@@ -49,9 +72,69 @@ import HeaderLink from './HeaderLink.astro';
 	.social-links a {
 		display: flex;
 	}
+
+	/* Hamburger button */
+	.hamburger {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0.5em;
+		z-index: 100;
+	}
+	.hamburger span {
+		display: block;
+		width: 24px;
+		height: 2px;
+		background-color: #000;
+		border-radius: 2px;
+		transition: transform 0.3s ease, opacity 0.3s ease;
+		transform-origin: center;
+	}
+
+	/* Animate to X when active */
+	.hamburger.active span:nth-child(1) {
+		transform: translateY(7px) rotate(45deg);
+	}
+	.hamburger.active span:nth-child(2) {
+		opacity: 0;
+	}
+	.hamburger.active span:nth-child(3) {
+		transform: translateY(-7px) rotate(-45deg);
+	}
+
+	/* Mobile dropdown menu */
+	.mobile-menu {
+		display: none;
+		flex-direction: column;
+		padding: 0.5em 0 1em;
+		border-top: 1px solid rgba(#000, 10%);
+	}
+	.mobile-menu.open {
+		display: flex;
+	}
+	.mobile-menu a {
+		padding: 0.75em 0.5em;
+		color: #000;
+		text-decoration: none;
+		border-bottom: 4px solid transparent;
+	}
+	.mobile-menu a.active {
+		border-bottom-color: var(--accent);
+	}
+
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		.internal-links {
+			display: none;
+		}
+		.hamburger {
+			display: flex;
 		}
 	}
 </style>

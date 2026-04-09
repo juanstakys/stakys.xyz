@@ -15,12 +15,12 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     <body>
         <Header />
         <main>
-			<section class="title">
-				<Image
-                src={portrait}
-				width={200}
-                alt="Portrait photograph of Juan Cruz Stakys, a professional headshot against a neutral background with warm, approachable lighting"
-				/>
+				<section class="title">
+					<Image
+						class="portrait-image"
+						src={portrait}
+						alt="Portrait photograph of Juan Cruz Stakys, a professional headshot against a neutral background with warm, approachable lighting"
+					/>
 				<div>
 					<h2>Juan Cruz Stakys</h2>
 				</div>
@@ -51,3 +51,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 		align-items: center;
 		gap: 3em;
 	}
+	:global(.title .portrait-image) {
+		width: 30vw;
+	}
+	:global(.title .portrait-image img) {
+		width: 100%;
+		height: auto;
+	}
+</style>
