@@ -1,5 +1,5 @@
 ---
-title: '(Intento de) Desmotración de que ChatGPT no puede tener consciencia'
+title: '(Intento de) Demostración de que ChatGPT no puede tener consciencia'
 description: ''
 pubDate: 'Apr 9 2026'
 ---
