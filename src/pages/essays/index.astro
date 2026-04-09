@@ -7,7 +7,7 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('englishWorks')).sort(
+const posts = (await getCollection('essays')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
@@ -96,7 +96,7 @@ const posts = (await getCollection('englishWorks')).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<a href={`/english-works/${post.id}/`}>
+								<a href={`/essays/${post.id}/`}>
 									{post.data.heroImage && (
 										<Image width={720} height={360} src={post.data.heroImage} alt="" />
 									)}
