@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import portrait from "../assets/temporal-portrait.webp"
+import portrait from "../assets/temporal-portrait.webp";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
@@ -15,48 +15,254 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     <body>
         <Header />
         <main>
-				<section class="title">
-					<Image
-						class="portrait-image"
-						src={portrait}
-						alt="Portrait photograph of Juan Cruz Stakys, a professional headshot against a neutral background with warm, approachable lighting"
-					/>
-				<div>
-					<h2>Juan Cruz Stakys</h2>
-				</div>
-			</section>
-			<hr>
-			<!-- <section class="about">
-				<h3>Sobre mí</h3>
-				<p>
-					Soy un amante de las matemáticas y programador de oficio. Actualmente estudio Licenciatura en Ciencias Matemáticas en la Universidad de Buenos Aires (UBA) he trabajado como desarrollador RPA, Backend, Fullstack y Frontend.
-				</p>
-				<h3>Mi carrera</h3>
-				<p>
-					Después de terminar mis estudios secundarios como técnico en informática, y habiendo estudiado desarrollo web y Python en la Academia Online Platzi, conseguí mi primer trabajo como desarrollador RPA en la consultora <i>FyS Tech Group</i>. Ahí trabajé creando soluciones para una variedad de clientes importantes en Argentina con Automation Anywhere. Más adelante mi rol se centró más en crear plataformas web, tanto para uso interno como para clientes, donde usé el lenguaje Javascript y TypeScript con frameworks como React y Node.js.
-				</p>
-			</section> -->
+            <section class="title">
+                <Image
+                    class="portrait-image"
+                    src={portrait}
+                    alt="Portrait photograph of Juan Cruz Stakys, a professional headshot against a neutral background with warm, approachable lighting"
+                />
+                <div>
+                    <h2>Juan Cruz Stakys</h2>
+                </div>
+            </section>
+            <hr />
+            <section class="about">
+                <h3>Sobre mí</h3>
+                <p>
+                    Soy un amante de las matemáticas y programador. Actualmente
+                    estudio Licenciatura en Ciencias Matemáticas en la
+                    Universidad de Buenos Aires.
+                </p>
+                <p class="small-note">
+                    Uno puede cambiar de casa, de auto, de intereses, de amigos,
+                    de pareja, incluso de familia; pero uno, por más que lo
+                    intente, nunca puede cambiar de pasión. Por eso creo que la
+                    pasión es lo que más nos define. Si me preguntan quién soy,
+                    prefiero responder primero en base a mis pasiones y después
+                    en base a mi carrera.
+                </p>
+                <details>
+                    <summary>
+                        <span>Mis pasiones</span>
+                    </summary>
+                    <h4>Matemática</h4>
+                    <p>
+                        Recuerdo bien la época en la que empezó a latir dentro
+                        mío la que ahora considero mi pasión más firme: la
+                        matemática.
+                    </p>
+                    <p>
+                        En primer año de secundaria, a mis 12–13 años, mi
+                        escuela nos invitó a participar en las Olimpiadas
+                        Matemáticas. No tengo recuerdos anteriores de un interés
+                        especial en la disciplina, sí de la facilidad con las
+                        que las manejaba y que me divertían un poco. La
+                        olimpíada consistía en varias instancias eliminatorias,
+                        abarcando cada una una región más grande: primero las
+                        eliminatorias intercolegiales; luego, las zonales (un
+                        conjunto de ciudades); luego, las regionales; y por
+                        último la instancia nacional, donde se definían el
+                        campeón, los subcampeones, las menciones honoríficas, y
+                        los aprobados.
+                    </p>
+                    <p>
+                        Durante la preparación para mi primera participación, la
+                        escuela nos dio clases extracurriculares donde
+                        resolvíamos problemas totalmente diferentes a los que
+                        veíamos en las clases normales. Estos problemas no se
+                        resumían en aplicar una fórmula, requerían realmente de
+                        pensamiento lógico y creativo. Muchos problemas eran
+                        planteados, más que con números y cuentas, con
+                        situaciones específicas, donde uno usaba la matemática
+                        para resolverlas. Estaba aprendiendo mucho, desafiando
+                        realmente a mi mente, y desarrollando habilidades que
+                        combinaban pensamiento abstracto, resolución de
+                        problemas, pensamiento creativo y lógico. Era un placer
+                        enorme. Y llegó el día de la primera prueba.
+                    </p>
+                    <p>
+                        La prueba consistía en sólo TRES problemas, en cuatro
+                        horas y media. Se requería resolver bien DOS para pasar
+                        a la siguiente instancia. El primero, un problema de
+                        razones; el segundo, de geometría; el tercero no lo
+                        recuerdo. Me dediqué de lleno a este primer problema,
+                        que no recuerdo que me haya significado mayor
+                        dificultad, y lo resolví limpiamente sin gastar mucho
+                        tiempo. Empecé con el segundo problema, anoté los datos,
+                        busqué patrones, construcciones útiles que me revelen
+                        alguna información extra. Le di miles de vueltas y...
+                        nada, no encontraba la forma. Probé ocuparme del tercer
+                        problema, del cual no tengo recuerdos. Iba y volvía.
+                        Cuando me trababa en un problema, intentaba avanzar en
+                        el otro, hasta que me trababa nuevamente y volvía al
+                        anterior, y el tiempo que tenía de sobra tras el primer
+                        ejercicio se me fue escurriendo lenta y dolorosamente
+                        entre los dos últimos. No recuerdo si terminé entregando
+                        alguno de los dos últimos o no, pero cuando llegó la
+                        hora ya no había vuelta atrás. Ya no podía corregir
+                        nada.
+                    </p>
+                    <p>
+                        Pasaron las semanas y me dieron la devolución de la
+                        prueba. No pasé. Fue una bocanada de realidad, no era
+                        tan bueno como pensaba. Esta frustración, lejos de
+                        desanimarme, me incitó a seguir participando. Tuve la
+                        suerte de poder discutir los problemas con la profesora,
+                        que me hizo ver dónde había errado y el camino a la
+                        solución.
+                    </p>
+                    <p>
+                        Seguí practicando y estudiando matemáticas por mi
+                        cuenta, pero al año siguiente, tras mudarme de ciudad y
+                        cambiar de escuela, no logré convencer a tiempo a los
+                        directivos para unirse a la competencia. A pesar de no
+                        haber podido ni siquiera empezar a participar en esta
+                        segunda oportunidad, fui privilegiado nuevamente con un
+                        profesor, Walter, que estimuló mi curiosidad matemática,
+                        y que celebraba todas mis muestras de conocimiento
+                        (aunque motivadas, quizá, por una necesidad adolescente
+                        de querer llamar la atención). Ese año no me detuve,
+                        practiqué y estudié mucho con los recursos que
+                        encontraba en internet, y para el año siguiente ya sabía
+                        que debía insistir desde MUY temprano para participar.
+                    </p>
+                    <p>
+                        Así fue como el tercer año logré inscribirme de nuevo,
+                        ya con otra profesora de matemática, Mariana. Llegó la
+                        primer prueba. Nuevamente, tres problemas, cuatro horas
+                        y media. Estos problemas eran más difíciles que los de
+                        hace dos años, estos ya eran para un chico de 14–15
+                        años. Eran más abstractos, ecuaciones raras y un
+                        problema de geometría tridimensional. Resolví el
+                        primero, el segundo me resultó más fácil, y el tercero
+                        (de geometría) planteaba una situación que nunca vi,
+                        pero tuve la intuición correcta de cómo encararlo. Lo
+                        que sí me enseñó esta prueba es que, aunque estudie
+                        mucho, pueden aparecer problemas que nunca vi,
+                        totalmente originales. Por más que uno se sienta
+                        preparado, los problemas pueden agarrarlo desprevenido.
+                    </p>
+                    <p>
+                        Al salir, compartí los problemas con mi profe,
+                        comparamos mi solución con la de ella, descubrimos un
+                        pequeño error en mi primer procedimiento, pero parecía
+                        que todo lo demás estaba bien. Y cuando pasaron las
+                        semanas me enteré que había pasado a la segunda
+                        instancia. Esta fue mi primer victoria personal en las
+                        olimpiadas.
+                    </p>
+                    <p>
+                        Pasaron los meses, seguí practicando, tanto con internet
+                        como con la compañía de la profe, que me daba muchos
+                        recursos muy útiles. Así, pasé de instancia en
+                        instancia. Y llegué a la instancia final. Viajé con mi
+                        profe a Córdoba, nos alojamos en hoteles asignados por
+                        región, conocí compañeros de diferentes escuelas tan
+                        apasionados por la matemática como yo, y creo que ahí
+                        descubrí que esto era lo que realmente me hacía feliz.
+                    </p>
+                    <p>
+                        Esta instancia era diferente: eran dos pruebas, dos días
+                        distintos. Si la dificultad entre instancias era
+                        progresiva, ahí descubrí que la instancia final estaba
+                        en un planeta a parte. Basta decir que salí entre los
+                        aprobados, y volví muy satisfecho a casa, con el desafío
+                        superado, amigos nuevos, y mucho aprendizaje. También
+                        descubrí una página llamada <a
+                            target="_blank"
+                            href="https://www.omaforos.com.ar">OMA Foros</a
+                        >, dónde pude intensificar mi práctica.
+                    </p>
+                    <p>
+                        Pasaron los años, volví a cambiar de escuela, pero seguí
+                        participando, esta vez acompañado por la profe Rosana.
+                        Fui acumulando victorias y derrotas, de las cuáles quizá
+                        escriba en un futuro. Conocí más amigos con los cuáles
+                        sigo en contacto, participé en otras compentencias,
+                        viajé a Córdoba varias veces y por la provincia de
+                        Buenos Aires, y lo que menos esperaba, me animé a hablar
+                        en público ante cientas de personas por primera vez.
+                    </p>
+                    <p>
+                        Tiendo a pensar que las matemáticas me apasionan por lo
+                        que son en sí, pero recordando todo esto, quizá lo hacen
+                        por todo lo que obtuve gracias a ellas. No puedo sino
+                        agradecer a todos los profesores que me acompañaron, a
+                        los equipos directivos de las escuelas públicas que
+                        movieron las fichas para, sin experiencia previa, lograr
+                        inscribirse a las olimpiadas sólo por mi mera
+                        insistencia (y seguramente de mis padres) y seguir esa
+                        tradición para los alumnos que venían detrás. También a
+                        mis padres y a mi familia que me dieron todo su
+                        acompañamiento y apoyo en cualquier cosa que necesitara.
+                        Y, obviamente el agradecimiento a toda la institución de
+                        la OMA, que lleva a cabo la competencia. Con todo esto,
+                        ¿cómo no desarrollar una verdadera pasión?
+                    </p>
+                </details>
+                <details>
+                    <summary>
+                        <span>Mi carrera</span>
+                    </summary>
+                    <p>
+                        Después de terminar mis estudios secundarios como
+                        técnico en informática, y habiendo estudiado desarrollo
+                        web y Python en la Academia Online Platzi, conseguí mi
+                        primer trabajo como desarrollador RPA en la consultora <a
+                            target="_blank"
+                            href="https://fystechgroup.com/">FyS Tech Group</a
+                        >. Ahí trabajé creando soluciones para una variedad de
+                        clientes importantes en Argentina con Automation
+                        Anywhere. Más adelante mi rol se enfocó a la creación
+                        plataformas web, tanto para uso interno como para
+                        clientes, donde usé el lenguaje Javascript y TypeScript
+                        con frameworks como React y Node.js.
+                    </p>
+                    <p>
+                        Actualmente trabajo en la consultora Autoconecta, dónde
+                        profundicé mi experiencia en desarrollo full-stack,
+                        dedicándome inicialmente al desarrollo frontend con
+                        Vue.js y Playwright para más adelante cumplir un rol
+                        backend con Laravel PHP, Docker, MySQL y GitLab CI-CD.
+                    </p>
+                </details>
+            </section>
         </main>
         <Footer />
     </body>
 </html>
 
 <style>
-	section {
-		margin: 2em 0;
-	}
-	.title {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 3em;
-	}
-	:global(.title .portrait-image) {
-		width: 30vw;
-		max-width: 200px;
-	}
-	:global(.title .portrait-image img) {
-		width: 100%;
-		height: auto;
-	}
+    section {
+        margin: 2em 0;
+    }
+    .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .small-note {
+        font-size: medium;
+        line-height: normal;
+        color: black;
+        background-color: gold;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    summary span {
+        font-size: 1.563em;
+        font-weight: bold;
+    }
+
+    :global(.title .portrait-image) {
+        width: 30vw;
+        max-width: 200px;
+    }
+    :global(.title .portrait-image img) {
+        width: 100%;
+        height: auto;
+    }
 </style>
