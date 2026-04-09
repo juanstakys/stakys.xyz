@@ -23,6 +23,10 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                 />
                 <div>
                     <h2>Juan Cruz Stakys</h2>
+                    <ul class="link-list">
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/essays">Essays</a></li>
+                    </ul>
                 </div>
             </section>
             <hr />
@@ -257,6 +261,32 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
     summary span {
         font-size: 1.563em;
         font-weight: bold;
+    }
+
+    ul.link-list {
+        list-style-type: none;
+        user-select: none;
+        padding-left: 0;
+
+        li {
+            margin-right: 5px;
+            display: inline-block;
+            a {
+                display: inline-block;
+                text-decoration-style: wavy;
+                background-color: lightcyan;
+                padding: 5px;
+                transform: skew(-2deg, -3deg);
+
+                &:hover {
+                    transform: scale(1.1) skew(-2deg, -3deg);
+                    transition: ease-in-out;
+                    transition-duration: 0.2s;
+                    background-color: cyan;
+                    color: black;
+                }
+            }
+        }
     }
 
     :global(.title .portrait-image) {
